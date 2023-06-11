@@ -1,13 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #eaeaea;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.swiper-button-next {
+  @apply text-black bg-[#F1F1F9] right-2 rounded-sm;
+}
+.swiper-button-prev {
+  @apply text-black bg-[#F1F1F9] !left-0 rounded-sm;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply !text-[15px];
+}
+
+.swiper-wrapper {
+  @apply mx-8;
+}
+
+.dashboardPage {
+  @apply mt-20 mx-2 flex flex-col md:flex-row gap-3;
+}
+.convoer {
+  @apply w-full md:w-[20%] 2xl:w-[15%] relative flex flex-col gap-3;
+}
+.convoer .MuiCardContent-root {
+  @apply pr-0;
+}
+.panel {
+  @apply w-full md:w-[45%] 2xl:w-[55%] flex flex-col gap-3;
+}
+.panelRow {
+  @apply flex flex-col md:flex-row gap-3;
+}
+.panelRow > div:first-child {
+  @apply w-full md:!w-[40%];
+}
+.panelRow > div {
+  @apply w-full md:w-[60%];
+}
+.convoer svg,
+.panel svg {
+  @apply w-[20px];
+}
+.convoer svg path,
+.panel svg path {
+  @apply fill-[#FFBF3C];
+}
+.conveorList {
+  @apply w-full;
+}
+.conveorList li {
+  @apply flex justify-start border-b border-[#E8E8E8] py-[5px] text-[14px] last:border-none;
+}
+.conveorList li span:nth-child(1) {
+  @apply w-[60%];
+}
+.accordian {
+  @apply mb-2 rounded-[5px] mr-3;
+}
+.Mui-expanded.accordian {
+  @apply !m-0 !mr-[12px];
+}
+.accordian svg path {
+  @apply fill-white;
+}
+.Mui-expanded.accordian svg path {
+  @apply fill-[#FFBF3C];
+}
+.accordian h6 {
+  @apply text-[15px] text-white;
+}
+.accordian #card-header {
+  @apply bg-[#53575A] min-h-[40px];
+}
+.accordian #card-header div {
+  @apply my-[5px];
+}
+.accordian p {
+  @apply text-[14px] text-[#53575A] mb-2 font-[500];
+}
+.exandableClick {
+  @apply relative w-full h-[25px];
+}
+.exandableClick Button {
+  @apply !absolute right-1 bottom-[0px];
+}
+.exandableClick svg path {
+  @apply fill-[#53575A];
+}
+.BtnGroup {
+  @apply flex flex-wrap gap-3 mt-3 mx-2;
+}
+.BtnGroup button {
+  @apply w-[47%] capitalize font-light;
+}
+.searchIcon {
+  @apply absolute left-4 top-5;
+}
+.searchIcon path {
+  @apply !fill-black;
+}
+.textBoxCl {
+  @apply relative;
+}
+.textBoxCl label {
+  @apply pl-3;
 }
